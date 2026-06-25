@@ -11,25 +11,45 @@ import requests
 LINKEDIN_VERSION = "202506"   # set to the current month per LinkedIn's docs
 
 
-def fresh_access_token():
-    resp = requests.post(
-        "https://www.linkedin.com/oauth/v2/accessToken",
-        data={
-            "grant_type": "refresh_token",
-            "refresh_token": os.environ["LINKEDIN_REFRESH_TOKEN"],
-            "client_id": os.environ["LINKEDIN_CLIENT_ID"],
-            "client_secret": os.environ["LINKEDIN_CLIENT_SECRET"],
-        },
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
-        timeout=30,
-    )
-    resp.raise_for_status()
-    return resp.json()["access_token"]
+def get_access_token():
+    """
+    Prefer the refresh-token flow (hands-off, renews forever). If no refresh
+    token is set, fall back to a directly stored access token.
+
+    NOTE: a stored access token expires ~60 days after it was issued. Before then,
+    enable token rotation on the LinkedIn app, re-run linkedin_auth.py to get a
+    real refresh token, add it as LINKEDIN_REFRESH_TOKEN, and this function
+    switches to the refresh flow automatically — no code change needed.
+    """
+    refresh = os.environ.get("LINKEDIN_REFRESH_TOKEN")
+    if refresh:
+        resp = requests.post(
+            "https://www.linkedin.com/oauth/v2/accessToken",
+            data={
+                "grant_type": "refresh_token",
+                "refresh_token": refresh,
+                "client_id": os.environ["LINKEDIN_CLIENT_ID"],
+                "client_secret": os.environ["LINKEDIN_CLIENT_SECRET"],
+            },
+            headers={"Content-Type": "application/x-www-form-urlencoded"},
+            timeout=30,
+        )
+        resp.raise_for_status()
+        return resp.json()["access_token"]
+
+    token = os.environ.get("LINKEDIN_ACCESS_TOKEN")
+    if not token:
+        raise SystemExit(
+            "Set LINKEDIN_REFRESH_TOKEN (preferred) or LINKEDIN_ACCESS_TOKEN."
+        )
+    return token
 
 
 def post(text):
-    token = fresh_access_token()
-    org_urn = f"urn:li:organization:{os.environ['LINKEDIN_ORG_ID']}"
+    token = get_access_token()
+    # Personal:  urn:li:person:XXXX   (works today via Share on LinkedIn)
+    # WBR page:  urn:li:organization:NNN  (after Community Management approval)
+    author_urn = os.environ["LINKEDIN_AUTHOR_URN"]
 
     resp = requests.post(
         "https://api.linkedin.com/rest/posts",
@@ -40,7 +60,7 @@ def post(text):
             "LinkedIn-Version": LINKEDIN_VERSION,
         },
         json={
-            "author": org_urn,
+            "author": author_urn,
             "commentary": text,
             "visibility": "PUBLIC",
             "distribution": {
