@@ -1,20 +1,254 @@
 [
   {
-    "title": "Why Canadian Startups Struggle to Scale Past Series A",
-    "url": "https://waterloobusinessreview.com/example-1",
-    "summary": "Examines the funding gap that stalls Canadian companies after early traction, and how the domestic VC ecosystem compares to the US.",
-    "themes": ["Canadian venture capital funding", "startup scaling Series A Canada"]
+    "title": "Rejected by Your Bank? Canada's Alternative Lending Trap",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2025/rejected_by_your_bank.html",
+    "summary": "Federal OSFI stress tests push creditworthy self-employed borrowers out of regulated banks and into high-rate B-lenders (7-12%), creating a $401B alternative-lending trap as a wave of 2026 mortgage renewals hits.",
+    "themes": ["Canada mortgage renewal 2026", "OSFI mortgage stress test"]
   },
   {
-    "title": "The Real Cost of Free: Fintech and the Interchange Model",
-    "url": "https://waterloobusinessreview.com/example-2",
-    "summary": "Breaks down how 'free' fintech products monetize through interchange and the regulatory pressure building against it.",
-    "themes": ["fintech interchange fees regulation", "Canada open banking"]
+    "title": "The Decline of the Luxury Clothing Industry",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2025/decline_of_luxury.html",
+    "summary": "Aggressive price hikes, market saturation, and unethical practices have eroded the exclusivity that defined luxury fashion, setting the industry up for a historic downturn.",
+    "themes": ["luxury goods sales slowdown", "LVMH Kering earnings"]
   },
   {
-    "title": "Activist Investors and the Governance Pendulum",
-    "url": "https://waterloobusinessreview.com/example-3",
-    "summary": "Looks at how activist campaigns reshape boards and the long-running tension between shareholder rights and management.",
-    "themes": ["activist investor campaign 2026", "corporate governance shareholder rights"]
+    "title": "The New A&R Playbook: Algorithm Signs the Artist",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2025/a_and_r_playbook.html",
+    "summary": "Streaming and social algorithms (Spotify, TikTok) have displaced the traditional record-label A&R machine as the primary way new artists are discovered and signed.",
+    "themes": ["music streaming artist discovery", "record label TikTok signing"]
+  },
+  {
+    "title": "The Fall of Canada's Mid-Tier Retail Stores",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2025/cover_retail.html",
+    "summary": "Mid-tier department retailers like Hudson's Bay and Sears are collapsing as they fail to keep pace with shifting consumer behaviour, reshaping the Canadian retail landscape.",
+    "themes": ["Hudson's Bay liquidation", "department store closures Canada"]
+  },
+  {
+    "title": "Has the IPL Reached Its Inflection Point?",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2025/ipl.html",
+    "summary": "The Indian Premier League's franchise-based, entertainment-heavy T20 model made it a commercial rocket and cultural phenomenon; the piece asks whether that growth has finally peaked.",
+    "themes": ["IPL media rights valuation", "cricket franchise league business"]
+  },
+  {
+    "title": "Beyond AI Multiples: The Value in Boring Businesses",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2025/boringjobs.html",
+    "summary": "While capital sprints toward AI at ~30x revenue multiples, the piece argues the real overlooked value sits in unglamorous, cash-generative 'boring' businesses.",
+    "themes": ["AI startup valuations bubble", "private equity boring businesses"]
+  },
+  {
+    "title": "Canada's Unsung Safety Net: The Economics of Firefighting",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2025/fire.html",
+    "summary": "Argues firefighting has quietly become one of Canada's most effective public services, even as trust in other public institutions erodes.",
+    "themes": ["Canada wildfire firefighting funding", "public services spending Canada"]
+  },
+  {
+    "title": "The Psychology of Persuasion: Tobacco and Sports Betting",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2025/sports.html",
+    "summary": "Draws a direct line between today's sports-betting marketing and the manipulative psychological tactics of 20th-century tobacco advertising.",
+    "themes": ["sports betting advertising regulation", "online gambling addiction"]
+  },
+  {
+    "title": "When Imagination Runs Dry: Disney's IP Overload",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2025/disney.html",
+    "summary": "Disney's reliance on remakes, sequels, and recycled franchises is wearing the magic thin and raising questions about the cost of creative stagnation.",
+    "themes": ["Disney box office remakes", "Disney franchise fatigue"]
+  },
+  {
+    "title": "McDonald's: A Fall From Grace",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2024/mcdonalds-fall.html",
+    "summary": "Once the undisputed fast-food leader, McDonald's has slid toward a low-quality 'last resort' brand as consumers shift toward healthier, more sustainable options.",
+    "themes": ["McDonald's sales decline", "fast food consumer trends"]
+  },
+  {
+    "title": "Intelligent Investments or PR Stunts? The Celebrity-to-VC Pipeline",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2024/celebrity-vc-pipeline.html",
+    "summary": "Examines the wave of celebrities launching venture funds and whether it reflects genuine investing acumen or just brand-building PR.",
+    "themes": ["celebrity venture capital fund", "celebrity investor startup"]
+  },
+  {
+    "title": "Game Over? The Future of Esports",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2024/esports-future.html",
+    "summary": "After surging through the COVID era, the esports industry now faces hard questions about whether its economics are actually sustainable.",
+    "themes": ["esports industry revenue 2026", "esports teams profitability"]
+  },
+  {
+    "title": "Reducing U.S. Dependence on Chinese Manufacturing",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2024/us-dependency.html",
+    "summary": "Despite nearshoring to Mexico and others, the US stays reliant on China for deeply interwoven, specialized supply chains that rivals can't yet replace.",
+    "themes": ["US China manufacturing decoupling", "supply chain reshoring tariffs"]
+  },
+  {
+    "title": "Gridlock: F1's Failed Expansion into America",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2024/f1.html",
+    "summary": "Formula 1's American growth push stumbled on the gap between Netflix popularity and live viewership, weak on-track competition, and a flawed economic model.",
+    "themes": ["Formula 1 US viewership", "F1 American expansion"]
+  },
+  {
+    "title": "Changing Skies: Why Budget Airlines Matter",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2024/budget-airlines.html",
+    "summary": "Blocked mergers (JetBlue/Spirit) and low-cost-carrier failures (Lynx Air) threaten the competition that keeps airfares in check for consumers.",
+    "themes": ["Spirit Airlines bankruptcy", "low cost airline competition"]
+  },
+  {
+    "title": "Revisiting European Energy: Mending a Fractured Market",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2024/european-energy.html",
+    "summary": "The Russia-Ukraine war shattered Europe's energy market, forcing a scramble that pushed parts of the EU back toward non-renewables despite climate pressure.",
+    "themes": ["Europe energy prices 2026", "EU energy security gas"]
+  },
+  {
+    "title": "Buy Now, Securitize Later: BNPL's Growing Risks",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2024/bnpl.html",
+    "summary": "The booming, lightly-regulated Buy Now Pay Later market is accumulating consumer-credit and systemic risks that few are pricing in.",
+    "themes": ["buy now pay later regulation", "BNPL consumer debt"]
+  },
+  {
+    "title": "The Double-Edged Sword of Foreign Investment",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2023/foreign.html",
+    "summary": "Foreign investment, championed as a savior for developing economies, often carries extractive and cynical dynamics beneath the optimistic rhetoric.",
+    "themes": ["foreign direct investment developing economies", "emerging market investment risk"]
+  },
+  {
+    "title": "Japan's Corporations: A Path to Prosperity",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2023/japan.html",
+    "summary": "Argues a changing corporate landscape and governance reform could pull Japan back toward the economic prosperity it was once expected to reach.",
+    "themes": ["Japan corporate governance reform", "Japan stock market Nikkei"]
+  },
+  {
+    "title": "GLP-1: Novo Nordisk's Gain, Denmark's Risk",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2023/novo-nordisk.html",
+    "summary": "Denmark's economy has grown dangerously concentrated on Novo Nordisk, whose GLP-1 weight-loss boom drives unsustainable, country-level reliance on one firm.",
+    "themes": ["Novo Nordisk Ozempic sales", "GLP-1 weight loss drug market"]
+  },
+  {
+    "title": "Space: The Misguided Promise of Privatization",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2023/space.html",
+    "summary": "A critical take arguing the promise of privatized space is overstated relative to the government foundations and funding the industry still rests on.",
+    "themes": ["SpaceX commercial space industry", "space privatization NASA"]
+  },
+  {
+    "title": "The Widening Tech Gap: Canada's Tech Future",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2023/tech-gap.html",
+    "summary": "After the 2021 'Canadian Tech Boom,' structural weaknesses and a pull toward the US in talent and capital threaten the country's tech ecosystem.",
+    "themes": ["Canada tech talent brain drain", "Canadian startup funding US"]
+  },
+  {
+    "title": "The Crisis of Greed: Behind the Russia-Ukraine War",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2022/crisis.html",
+    "summary": "Examines how war profiteering and corporate self-interest complicate the moral narrative of corporate 'support' during the Russia-Ukraine conflict.",
+    "themes": ["defense contractor profits Ukraine", "war economy corporate"]
+  },
+  {
+    "title": "Tesla: The Future of the Electrical Industry",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2022/tesla.html",
+    "summary": "Frames Tesla as the entrepreneur-led bet on the fossil-fuel-to-renewables energy transition and the opportunity climate change has created.",
+    "themes": ["Tesla EV market share", "electric vehicle industry 2026"]
+  },
+  {
+    "title": "Roblox: The Digital Las Vegas",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2021/roblox.html",
+    "summary": "Reframes Roblox not as a game but as a developer platform and virtual economy, with monetization dynamics that resemble a casino.",
+    "themes": ["Roblox earnings user spending", "Roblox platform economy"]
+  },
+  {
+    "title": "Private Equity: A New Player on the Field",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2021/private_equity.html",
+    "summary": "Record PE dry powder is flowing into professional sports-franchise ownership as leagues open up, treating teams as an uncorrelated alternative asset.",
+    "themes": ["private equity sports team ownership", "sports franchise valuations"]
+  },
+  {
+    "title": "The Business of Ethical Hacking",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2021/hacking.html",
+    "summary": "As cybercrime grows lucrative, firms increasingly hire ethical hackers to test their systems, reshaping how the security industry is incentivized.",
+    "themes": ["ethical hacking penetration testing", "corporate cybersecurity breach"]
+  },
+  {
+    "title": "The War on Big Tech",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2021/bigtech.html",
+    "summary": "Traces the antitrust offensive against Apple, Amazon, Google, and Facebook and how monopolization concerns are reshaping the consumer economy.",
+    "themes": ["Big Tech antitrust lawsuit", "Google Apple antitrust ruling"]
+  },
+  {
+    "title": "Catastrophe Bonds: Preparing India for Disaster",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2021/india.html",
+    "summary": "Proposes catastrophe bonds and insurance-linked securities as a financial mechanism to prepare India for the climate disasters we may fail to prevent.",
+    "themes": ["catastrophe bonds climate", "insurance linked securities disaster"]
+  },
+  {
+    "title": "Cleaning Up Oil and Gas: The Future of ESG",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2021/esg.html",
+    "summary": "Looks at ESG's role in pushing the oil and gas sector toward cleaner extraction methods amid heavy global reliance on these fuels.",
+    "themes": ["ESG oil and gas investing", "ESG backlash energy"]
+  },
+  {
+    "title": "African Renaissance: The Dark Side of the Green Revolution",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2021/african_renaissance.html",
+    "summary": "The green-energy transition depends on African mineral extraction, carrying human and economic costs that the clean-energy narrative overlooks.",
+    "themes": ["cobalt lithium mining Africa", "green energy critical minerals"]
+  },
+  {
+    "title": "Psychedelics: An Elusive Opportunity",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2021/psychedelics.html",
+    "summary": "Pre-revenue psychedelics companies command billion-dollar valuations on bets that US decriminalization and medical approval are near.",
+    "themes": ["psychedelics company stock", "psilocybin MDMA therapy approval"]
+  },
+  {
+    "title": "SPACs: The Downfall of the IPO",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2021/SPAC.html",
+    "summary": "The record SPAC boom challenged the traditional IPO as the default route to public markets, fueled by retail investors and abundant dry powder.",
+    "themes": ["SPAC market 2026", "IPO vs SPAC going public"]
+  },
+  {
+    "title": "BlackBerry is Back and Here to Stay",
+    "url": "https://www.waterloobusinessreview.org/articles/winter-2021/blackberry.html",
+    "summary": "After its smartphone collapse, BlackBerry reinvented itself around enterprise software, cybersecurity, and embedded systems by leveraging its security brand.",
+    "themes": ["BlackBerry cybersecurity QNX", "BlackBerry enterprise software"]
+  },
+  {
+    "title": "Business Models That Are Out of This World",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2020/business_model.html",
+    "summary": "Charts the space industry's shift from government agencies to commercial players with new philosophies, reusable rockets, and private business models.",
+    "themes": ["commercial space industry business", "reusable rocket SpaceX revenue"]
+  },
+  {
+    "title": "Bitcoin: A Facilitator of Money Laundering",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2020/bitcoin.html",
+    "summary": "Argues Bitcoin's pseudonymous, ledger-based design makes it a vehicle for money laundering and illicit finance even as it dominates crypto.",
+    "themes": ["cryptocurrency money laundering", "Bitcoin illicit finance regulation"]
+  },
+  {
+    "title": "A New Era of Sports: The Digital Realm of Gaming",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2020/esports.html",
+    "summary": "Esports surged in viewership and revenue through COVID lockdowns as traditional sports and entertainment stalled, signaling a structural shift.",
+    "themes": ["esports viewership growth", "competitive gaming industry"]
+  },
+  {
+    "title": "Tesla and Its Electric Bubble",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2020/tesla.html",
+    "summary": "A skeptical 2020 take questioning whether Tesla's explosive valuation run was a bubble masking serious internal and competitive obstacles.",
+    "themes": ["Tesla stock valuation", "Tesla overvalued bubble"]
+  },
+  {
+    "title": "Alternative Credit Analytics: Inclusivity in Banking",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2020/alternative_credit_analytics.html",
+    "summary": "Alternative data for credit scoring could extend credit to millions of unbanked and credit-invisible consumers, narrowing racial and economic equity gaps.",
+    "themes": ["alternative credit scoring data", "financial inclusion unbanked fintech"]
+  },
+  {
+    "title": "The Streaming Wars: When Consumers Become the Casualties",
+    "url": "https://www.waterloobusinessreview.org/articles/spring-2020/the_streaming_wars.html",
+    "summary": "As OTT services fragment across competing platforms, the streaming wars push subscription costs up and leave consumers as the casualties.",
+    "themes": ["streaming service price increase", "streaming subscriptions bundling"]
+  },
+  {
+    "title": "TikTok's Time is Ticking",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2020/tik_tok.html",
+    "summary": "US national-security concerns over data drove a forced divestiture of TikTok's American operations, with implications well beyond one app.",
+    "themes": ["TikTok ban divestiture US", "TikTok ByteDance sale"]
+  },
+  {
+    "title": "Has the Gig Economy Stopped Calling?",
+    "url": "https://www.waterloobusinessreview.org/articles/fall-2020/gig_economy.html",
+    "summary": "App-driven gig and freelance work exploded on the back of digitization, but the model's momentum and its sustainability for workers are in question.",
+    "themes": ["gig economy worker rights", "gig worker classification ruling"]
   }
 ]
