@@ -1,0 +1,49 @@
+name: Generate Friday WBR post
+
+on:
+  schedule:
+    # 13:00 UTC = 9:00am Eastern during daylight time (10:00 EDT vs EST shifts;
+    # adjust if you care about the exact hour year-round)
+    - cron: "0 13 * * 5"
+  workflow_dispatch:        # lets you run it manually to test
+
+permissions:
+  contents: write           # to commit draft.json
+  issues: write             # to open the review issue
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Generate draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python generate_post.py
+
+      - name: Commit draft
+        run: |
+          git config user.name "wbr-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add draft.json
+          git commit -m "Draft for $(date +%F)" || echo "no changes"
+          git push
+
+      - name: Open review issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq -r '.final_body' draft.json > body.txt
+          echo "" >> body.txt
+          echo "---" >> body.txt
+          echo "Approve by running the **Publish WBR post** workflow." >> body.txt
+          gh issue create \
+            --title "WBR Friday post ready — $(date +%F)" \
+            --body-file body.txt
