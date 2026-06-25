@@ -1,0 +1,29 @@
+name: Publish WBR post
+
+# Manual only — this is your approval gate. Click "Run workflow" after you've
+# reviewed the draft issue.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Publish to LinkedIn
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
+        run: python publish.py
