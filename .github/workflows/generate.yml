@@ -34,6 +34,7 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
           git add draft.json
           git commit -m "Draft for $(date +%F)" || echo "no changes"
+          git pull --rebase origin main
           git push
 
       - name: Open review issue
