@@ -48,6 +48,14 @@ def extract_json(text):
     return json.loads(text[start:end + 1])
 
 
+def no_emdash(text):
+    """Backstop: strip em-dash style punctuation even if the model slips."""
+    text = text.replace("—", ", ").replace(" – ", ", ")
+    while "  " in text:
+        text = text.replace("  ", " ")
+    return text.replace(" ,", ",").replace(",,", ",")
+
+
 def build_catalog(articles):
     return "\n".join(
         f"[{i}] {a['title']} — {a['summary']}" for i, a in enumerate(articles)
@@ -59,10 +67,22 @@ def generate(client, articles):
     catalog = build_catalog(articles)
 
     system = (
-        "You curate the Waterloo Business Review's weekly LinkedIn post, a "
-        "student-run business publication at the University of Waterloo. "
-        "Voice: sharp, analytical, accessible. No hashspam, no emoji walls, "
-        "no 'thrilled to share'. You are rigorous about facts and never invent news."
+        "You write the Waterloo Business Review's weekly LinkedIn post. WBR is a "
+        "student-run business publication at the University of Waterloo. Match WBR's "
+        "editorial voice: analytical, specific, and confident, the way a sharp business "
+        "writer actually talks, not a press release and not a LinkedIn influencer. "
+        "Lead with concrete detail (names, numbers, what actually happened) over abstract "
+        "framing.\n\n"
+        "Write so it does NOT read as AI-generated:\n"
+        "- Never use em dashes. Use commas or periods, or rewrite the sentence.\n"
+        "- Avoid the two-beat antithesis ('It's not X, it's Y'; 'That's not luck, that's "
+        "...'), dramatic one-line fragments, and forced rule-of-three lists.\n"
+        "- Avoid filler tells: 'the whole argument', 'make no mistake', 'hard to dismiss', "
+        "'worth a read', 'isn't niche anymore', 'here's the thing', 'in an era where', "
+        "'speaks volumes', 'underscores'.\n"
+        "- Vary sentence length naturally. Trust the reader; don't over-explain the link.\n"
+        "- No emoji in the body. One or two tasteful hashtags at most.\n"
+        "Be rigorous about facts and never invent news."
     )
 
     user = f"""STEP 1 — Find the week's biggest business news (use web search):
@@ -90,9 +110,12 @@ explains what's happening right now." Reject superficial keyword overlaps.
 If no article connects strongly to a genuinely major story, do not force it — return
 exactly {{"no_match": true}}.
 
-STEP 3 — Write the post (~100-160 words): open with a hook on the major news, bridge to
-the chosen article's argument, end with a soft prompt to read the original. No URLs in the
-body. Do not write "link in comments". One or two tasteful hashtags max.
+STEP 3 — Write the post (roughly 90-130 words, kept tight). Three beats, in order:
+1) The news: what happened, concretely and specifically.
+2) The broader significance: why it matters and the larger pattern or impact.
+3) The WBR connection: how the chosen article's argument frames or explains it.
+Close simply by pointing readers to the original article. Cut anything that doesn't serve
+those three beats. No URLs in the body. Do not write "link in comments".
 
 FINAL output: ONLY one JSON object, no markdown fences, no other text — either
 {{"no_match": true}} or:
@@ -120,6 +143,7 @@ FINAL output: ONLY one JSON object, no markdown fences, no other text — either
         print(f"  rejected non-article URL: {result.get('chosen_news_url')!r}")
         return None
 
+    result["post_text"] = no_emdash(result["post_text"])
     return articles[idx], result
 
 
