@@ -41,11 +41,24 @@ def looks_like_article(url):
 
 
 def extract_json(text):
-    text = text.replace("```json", "").replace("```", "").strip()
-    start, end = text.find("{"), text.rfind("}")
-    if start == -1 or end == -1:
-        raise ValueError(f"No JSON found in model output:\n{text}")
-    return json.loads(text[start:end + 1])
+    """Parse the first complete JSON object that has our expected keys.
+
+    Tolerates trailing text, multiple objects, stray braces, and code fences.
+    """
+    text = text.replace("```json", "").replace("```", "")
+    decoder = json.JSONDecoder()
+    idx = text.find("{")
+    while idx != -1:
+        try:
+            obj, _ = decoder.raw_decode(text, idx)
+            if isinstance(obj, dict) and (
+                "no_match" in obj or "article_index" in obj or "post_text" in obj
+            ):
+                return obj
+        except json.JSONDecodeError:
+            pass
+        idx = text.find("{", idx + 1)
+    raise ValueError(f"No usable JSON found in model output:\n{text}")
 
 
 def no_emdash(text):
